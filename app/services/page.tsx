@@ -2,9 +2,9 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import Link from "next/link"
 import { Palette, Globe, Camera, Lightbulb } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "react-day-picker"
+import { Link } from "react-router-dom"
 
 export default function ServicesPage() {
   const services = [
@@ -47,8 +47,6 @@ export default function ServicesPage() {
       >
         <div className="flex justify-between items-center">
           <Button
-            variant="ghost"
-            size="icon"
             className="text-white hover:text-amber-400 z-50 relative"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -88,7 +86,7 @@ export default function ServicesPage() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <Link href="/">
+            <Link to="/">
               <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center text-black font-bold text-xl">
                 JM
               </div>
@@ -137,7 +135,7 @@ export default function ServicesPage() {
                     transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                   >
                     <Link
-                      href={item.href}
+                      to={item.href}
                       className="block text-5xl md:text-7xl font-light text-white hover:text-amber-400 transition-all duration-500 tracking-wider"
                       onClick={() => setIsMenuOpen(false)}
                       onMouseEnter={(e) => {
@@ -253,15 +251,13 @@ export default function ServicesPage() {
               Ready to elevate your brand with exceptional creative work? Let's discuss your project.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild className="bg-amber-400 text-black hover:bg-amber-500 px-8 py-3">
-                <Link href="/contact">Get Started</Link>
+              <Button className="bg-amber-400 text-black hover:bg-amber-500 px-8 py-3">
+                <Link to="/contact">Get Started</Link>
               </Button>
               <Button
-                variant="outline"
-                asChild
                 className="border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-black px-8 py-3 bg-transparent"
               >
-                <Link href="/portfolio">View Portfolio</Link>
+                <Link to="/portfolio">View Portfolio</Link>
               </Button>
             </div>
           </motion.div>

@@ -3,12 +3,10 @@
 import type React from "react"
 
 import { motion, AnimatePresence } from "framer-motion"
-import Link from "next/link"
 import { Mail, Phone, MapPin, Send } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { useState } from "react"
+import { Button } from "react-day-picker"
+import { Link } from "react-router-dom"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -65,8 +63,6 @@ export default function ContactPage() {
       >
         <div className="flex justify-between items-center">
           <Button
-            variant="ghost"
-            size="icon"
             className="text-white hover:text-amber-400 z-50 relative"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -106,7 +102,7 @@ export default function ContactPage() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <Link href="/">
+            <Link to="/">
               <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center text-black font-bold text-xl">
                 JM
               </div>
@@ -155,7 +151,7 @@ export default function ContactPage() {
                     transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                   >
                     <Link
-                      href={item.href}
+                      to={item.href}
                       className="block text-5xl md:text-7xl font-light text-white hover:text-amber-400 transition-all duration-500 tracking-wider"
                       onClick={() => setIsMenuOpen(false)}
                       onMouseEnter={(e) => {
@@ -214,7 +210,7 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <Input
+                    <input
                       type="text"
                       name="name"
                       placeholder="Your Name"
@@ -225,7 +221,7 @@ export default function ContactPage() {
                     />
                   </div>
                   <div>
-                    <Input
+                    <input
                       type="email"
                       name="email"
                       placeholder="Your Email"
@@ -237,7 +233,7 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div>
-                  <Input
+                  <input
                     type="text"
                     name="subject"
                     placeholder="Subject"
@@ -248,7 +244,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <Textarea
+                  <textarea
                     name="message"
                     placeholder="Your Message"
                     value={formData.message}

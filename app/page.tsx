@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
+import { Button } from "react-day-picker"
+import { Link } from "react-router-dom"
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -33,8 +33,6 @@ export default function HomePage() {
         <div className="flex justify-between items-center">
           {/* Hamburger Menu Button */}
           <Button
-            variant="ghost"
-            size="icon"
             className="text-white hover:text-amber-400 z-50 relative"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -75,7 +73,7 @@ export default function HomePage() {
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
-            <Link href="/">
+            <Link to="/">
               <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center text-black font-bold text-xl">
                 JM
               </div>
@@ -121,7 +119,7 @@ export default function HomePage() {
                     transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                   >
                     <Link
-                      href={item.href}
+                      to={item.href}
                       className="block text-5xl md:text-7xl font-light text-white hover:text-amber-400 transition-all duration-500 tracking-wider"
                       onClick={() => setIsMenuOpen(false)}
                       onMouseEnter={(e) => {
@@ -185,7 +183,7 @@ export default function HomePage() {
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
-                href="/portfolio"
+                to="/portfolio"
                 className="inline-block px-8 py-3 border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-black transition-all duration-300 text-lg font-light tracking-wide"
               >
                 View My Work
