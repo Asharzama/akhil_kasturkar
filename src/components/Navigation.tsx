@@ -24,7 +24,7 @@ export default function Navigation() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="flex justify-between items-center">
+        <div className="flex justify-end items-center">
           {/* Hamburger Menu Button */}
           <button
             className="text-white hover:text-amber-400 z-50 relative p-2 bg-transparent border-none cursor-pointer"
@@ -69,7 +69,7 @@ export default function Navigation() {
           >
             <Link to="/">
               <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center text-black font-bold text-xl">
-                JM
+                AK
               </div>
             </Link>
           </motion.div>
@@ -114,7 +114,7 @@ export default function Navigation() {
                   >
                     <Link
                       to={item.href}
-                      className="block text-5xl md:text-7xl font-light text-white hover:text-amber-400 transition-all duration-500 tracking-wider"
+                      className="block text-4xl font-light text-white hover:text-amber-400 transition-all duration-500 tracking-wider"
                       onClick={() => setIsMenuOpen(false)}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.transform = "translateX(20px)"
@@ -138,7 +138,7 @@ export default function Navigation() {
                 transition={{ duration: 0.5, delay: 0.8 }}
               >
                 <p className="text-amber-400 text-lg">Get in touch</p>
-                <p className="text-gray-300">hello@jimmymistry.com</p>
+                <p className="text-gray-300">hello@akhilkasturkar.com</p>
                 <p className="text-gray-300">+1 (555) 123-4567</p>
               </motion.div>
             </div>

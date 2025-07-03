@@ -20,20 +20,20 @@ export default function HomePage() {
       <main className="flex items-center justify-center min-h-screen px-6">
         <div className="text-center">
           <motion.h1
-            className="text-6xl md:text-8xl lg:text-9xl font-light tracking-widest mb-8"
+            className="text-6xl lg:text-8xl font-light tracking-widest"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 0.8 }}
             transition={{ duration: 1.2, delay: 0.5 }}
           >
-            JIMMY
+            Akhil
           </motion.h1>
           <motion.h2
-            className="text-6xl md:text-8xl lg:text-9xl font-light tracking-widest"
+            className="text-6xl lg:text-8xl font-light tracking-widest"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 0.8 }}
             transition={{ duration: 1.2, delay: 0.8 }}
           >
-            MISTRY
+            Kasturkar
           </motion.h2>
 
           <motion.div
@@ -43,12 +43,12 @@ export default function HomePage() {
             transition={{ duration: 0.8, delay: 1.5 }}
           >
             <p className="text-xl md:text-2xl font-light text-gray-300 mb-8 tracking-wide">
-              Creative Director & Digital Artist
+              Creative Director & Mentor
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 to="/portfolio"
-                className="inline-block px-8 py-3 border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-black transition-all duration-300 text-lg font-light tracking-wide"
+                className="inline-block px-8 py-3 border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-black transition-all duration-300 text-lg font-semibold tracking-wide"
               >
                 View My Work
               </Link>

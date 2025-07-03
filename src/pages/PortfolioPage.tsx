@@ -59,7 +59,7 @@ export default function PortfolioPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="text-5xl md:text-7xl font-light tracking-wider mb-6">PORTFOLIO</h1>
+            <h1 className="text-5xl font-light tracking-wider mb-6">PORTFOLIO</h1>
             <div className="w-24 h-1 bg-amber-400 mx-auto mb-6"></div>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               A curated selection of my creative work spanning branding, digital art, and web experiences.

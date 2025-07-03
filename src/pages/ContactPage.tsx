@@ -63,14 +63,14 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="text-5xl md:text-7xl font-light tracking-wider mb-6">CONTACT</h1>
+            <h1 className="text-5xl font-light tracking-wider mb-6">CONTACT</h1>
             <div className="w-24 h-1 bg-amber-400 mx-auto mb-6"></div>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Ready to start your next creative project? Let's discuss how we can bring your vision to life.
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-16 mb-20">
+          <div className="grid lg:grid-cols-2 gap-16 pb-20">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
